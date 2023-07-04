@@ -28,5 +28,8 @@ class TestCardGame(unittest.TestCase):
         self.card2.value = 3
         self.assertEqual(self.game.cards_total(cards), "You have a total of 5")  # 2 + 3 = 5
 
+    def test_check_for_ace(self):
+        self.assertEqual(True, self.game.check_for_ace(self.card1))  # use card1 in a test
+
 if __name__ == "__main__":
     unittest.main()
